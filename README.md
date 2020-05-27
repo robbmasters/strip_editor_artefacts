@@ -1,6 +1,7 @@
-Strip Editor Artfacts Module
+<strong>Strip Editor Artefacts module</strong>
 
-Remove artefacts (i.e. <p>&nbsp;</p>) from nodes on saving.
+Remove artefacts from Drupal nodes on saving - i.e. strip out any occurences of <code>&lt;p&gt;&amp;nbsp;&lt;/p&gt;</code> that are created by CKEditor in Drupal 8.
 
-Strip out any occurences of <p>&nbsp;</p>that are created by the editor.
-See https://www.drupal.org/project/drupal/issues/2876094
+Note that this module cannot distinguish between those created intentionally and those created unintentionally, so will remove anything that exactly matches <code>&lt;p&gt;&amp;nbsp;&lt;/p&gt;</code>. Therefore, to keep any such paragraphs that are required, make a minor modification - such as adding a class to the <code>&lt;p&gt;</code> tag, or a second <code>&amp;nbsp;</code> within it.
+
+See https://www.drupal.org/project/drupal/issues/2876094 for more details of the issue that this module aims to address.
