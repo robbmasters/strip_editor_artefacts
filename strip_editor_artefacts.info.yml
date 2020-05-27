@@ -2,5 +2,5 @@ name: Strip Editor Artefacts
 description: Remove editor artefacts (i.e. &lt;p&gt;&amp;nbsp;&lt;/p&gt;) from entities on saving.
 package: Custom
 type: module
-version: 8.x-1.1
+version: 8.x-1.2
 core_version_requirement: ^8.8 || ^9.0
