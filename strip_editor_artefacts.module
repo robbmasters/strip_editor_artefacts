@@ -2,11 +2,10 @@
 /**
  * Implements hook_ENTITY_TYPE_presave.
  */
-function strip_editor_artefacts_node_presave($node) {
+function strip_editor_artefacts_entity_presave($entity) {
   /**
    * Strip out any occurences of <p>&nbsp;</p>that are created by the editor.
    * See https://www.drupal.org/project/drupal/issues/2876094
    */
-  $node->body->value = str_replace("<p>&nbsp;</p>", "", $node->body->value);
+  $entity->body->value = str_replace("<p>&nbsp;</p>", "", $entity->body->value);
 }
-
